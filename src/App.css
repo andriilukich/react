@@ -1,3 +1,90 @@
-li {
-  list-style-type: georgian;
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "h h"
+  "n c";
+
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-area: h;
+  background-color: rgb(100, 219, 100);
+}
+
+.header__logo {
+  width: 60px;
+}
+
+.nav {
+  grid-area: n;
+  background-color: rgb(100, 219, 100);
+}
+
+.nav__list {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.nav__item:nth-last-child(n+2) {
+  margin-bottom: 5px;
+}
+
+.nav__item:last-child {
+  margin-top: 15px;
+}
+
+.nav__link {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content {
+  grid-area: c;
+}
+
+.content__header {
+  margin-bottom: 10px;
+}
+
+.content__img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile__card {
+  display: flex;
+}
+
+.profile__ava {
+  width: 200px;
+}
+
+.profile__info {
+  margin-left: 10px;
+}
+
+.profile__full-name {
+  margin: 0;
+
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.profile__data {
+  font-size: 24px;
 }
